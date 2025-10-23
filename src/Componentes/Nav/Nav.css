@@ -1,60 +1,100 @@
+/* ======== BOTÓN MENU ======== */
 .menu-toggle {
   position: fixed;
   top: 15px;
   left: 15px;
-  background: #0d4161;
+  background: #0D4161; /* Azul principal */
   border: none;
   color: white;
-  font-size: 1.5rem;
-  border-radius: 8px;
+  font-size: 1.8rem;
+  border-radius: 10px;
   padding: 6px 10px;
   cursor: pointer;
-  z-index: 2000;
+  z-index: 2001; /* siempre encima del overlay */
   transition: background 0.3s ease;
 }
 
 .menu-toggle:hover {
-  background: #0a324c;
+  background: #1E6A8B;
 }
 
-/* Sidebar oculta */
+/* ======== SIDEBAR ======== */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -270px; /* Oculta fuera de la vista */
   width: 250px;
   height: 100vh;
-  background: #222831;
+  background: #222831; /* azul oscuro */
   color: white;
-  transition: left 0.4s ease;
-  padding-top: 60px;
-  z-index: 1500;
+  transition: left 0.3s ease;
+  padding-top: 70px;
+  z-index: 2000;
+  overflow-y: auto;
 }
 
 .sidebar.open {
-  left: 0;
+  left: 0; /* se muestra */
 }
 
 .sidebar h2 {
-  margin: 0 0 20px 20px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin-top: 30px;
 }
 
 .sidebar li {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 .sidebar a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  padding: 10px 20px;
+  font-size: 1.1rem;
+  padding: 12px 20px;
   display: block;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
 .sidebar a:hover {
   background: #222831;
+}
+
+/* ======== OVERLAY (fondo oscuro cuando el menú está abierto) ======== */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* efecto de oscurecimiento */
+  z-index: 1500;
+  display: none;
+}
+
+.sidebar-overlay.show {
+  display: block;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .sidebar h2 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar a {
+    font-size: 1rem;
+  }
 }
