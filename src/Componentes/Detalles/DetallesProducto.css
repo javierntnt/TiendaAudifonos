@@ -1,0 +1,101 @@
+.detalles-container {
+  margin-left: 240px; /* separa del menú lateral */
+  padding: 50px 60px;
+  background-color: #fafafa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.volver {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.volver:hover {
+  background-color: #0d4161;
+}
+
+.detalles-container h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #080808;
+}
+
+/* Imagen principal y galería */
+.imagenes-detalle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.img-principal {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.miniaturas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.miniaturas img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.miniaturas img:hover {
+  border: 2px solid #007bff;
+  transform: scale(1.05);
+}
+
+/* Información del producto */
+.precio {
+  font-size: 1.5rem;
+  color: #0d4161;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  max-width: 600px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Métodos de pago */
+h4 {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: #fffbfb;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  color: #fff;
+  background: #0a0a0a;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
