@@ -45,7 +45,7 @@ export default function Nav() {
 
         <div className="sidebar-socials">
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/j_j_innovations?igsh=MTBkMnlrbDFiNDQ4Mw=="
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,15 +58,7 @@ export default function Nav() {
           >
             <FaWhatsapp />
           </a>
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebookF />
-          </a>
         </div>
-
         <p className="sidebar-contact">📞 +57 300 123 4567</p>
       </nav>
     </>

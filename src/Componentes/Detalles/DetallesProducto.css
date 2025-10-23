@@ -1,11 +1,13 @@
+/* Contenedor principal de detalles */
 .detalles-container {
-  margin-left:50px; /* separa del menú lateral */
+  margin-left: 50px;
   padding: 50px 60px;
   background-color: #fafafa;
   min-height: 100vh;
   box-sizing: border-box;
 }
 
+/* Botón de volver */
 .volver {
   background-color: #000;
   color: #fff;
@@ -21,13 +23,14 @@
   background-color: #0d4161;
 }
 
+/* Título del producto */
 .detalles-container h2 {
   font-size: 2rem;
   margin: 20px 0;
   color: #080808;
 }
 
-/* Imagen principal y galería */
+/* Galería de imágenes */
 .imagenes-detalle {
   display: flex;
   flex-direction: column;
@@ -65,7 +68,7 @@
   transform: scale(1.05);
 }
 
-/* Información del producto */
+/* Precio y descripción */
 .precio {
   font-size: 1.5rem;
   color: #0d4161;
@@ -90,12 +93,67 @@ h4 {
 ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Espacio entre los botones */
 }
+
 ul li {
   color: #fff;
   background: #222831;
   margin: 8px 0;
-  padding: 10px 15px;
+  padding: 15px 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación y efectos al pasar el mouse */
+ul li:hover {
+  background-color: #0d4161;
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+/* Información de pago */
+.informacion-pago {
+  margin-top: 20px;
+}
+
+.informacion-pago img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .detalles-container {
+    padding: 30px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  .imagenes-detalle {
+    flex-direction: column;
+  }
+  
+  .img-principal {
+    width: 250px;
+    height: 250px;
+  }
+
+  .miniaturas img {
+    width: 60px;
+    height: 60px;
+  }
+
+  ul {
+    justify-content: center; /* Centra los botones en pantallas pequeñas */
+    gap: 10px;
+  }
+
+  ul li {
+    padding: 12px 15px; /* Reducir el tamaño del padding para móviles */
+    font-size: 1rem; /* Ajustar el tamaño de la fuente */
+  }
 }
