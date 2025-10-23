@@ -1,17 +1,188 @@
-.home {
-  margin-left: 240px;
+/* ======== ESTILOS BASE ======== */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #0D4161; /* Fondo amarillo vibrante */
+  transition: all 0.4s ease; /* transición suave para desplazamiento */
+}
+
+/* Cuando el menú lateral está abierto */
+body.nav-open .home-container {
+  margin-left: 250px; /* igual al ancho del sidebar */
+  width: calc(100% - 250px);
+}
+
+/* ======== SECCIONES ======== */
+.home-section {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.left,
+.right {
+  background-color: #0D4161;
+}
+
+.center {
+  background-color: #E9EEF2;
+  flex-direction: column;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
 }
 
-.eslogan {
-  font-size: 2rem;
+/* ======== IMÁGENES ======== */
+.home-img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.home-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== TEXTOS ======== */
+.home-title {
+  font-size: 6rem;
+  color: #222831;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  color: #333;
   margin-bottom: 30px;
-  color: #222;
+  line-height: 1.4;
 }
 
-.imagen-home {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+/* ======== BOTONES ======== */
+.home-btn {
+  background-color: black;
+  color: white;
+  padding: 15px 35px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+  background-color: #222;
+  transform: translateY(-3px);
+}
+
+/* ======== EFECTO DE ENTRADA SUAVE ======== */
+.home-container,
+.home-section,
+.home-title,
+.home-subtitle,
+.home-btn,
+.home-img {
+  transition: all 0.3s ease;
+}
+
+/* ======== RESPONSIVE: TABLETS ======== */
+@media (max-width: 1024px) {
+  .home-title {
+    font-size: 4rem;
+  }
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+  .home-img {
+    max-width: 320px;
+  }
+}
+
+/* ======== RESPONSIVE: MÓVILES GRANDES ======== */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    height: auto;
+    margin-left: 0; /* sin espacio del menú */
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .home-section {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .home-img {
+    width: 70%;
+    max-width: 250px;
+  }
+
+  .home-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+/* ======== RESPONSIVE: MÓVILES PEQUEÑOS ======== */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 20px 10px;
+  }
+
+  .home-title {
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .home-img {
+    width: 85%;
+    max-width: 200px;
+  }
+
+  .home-btn {
+    width: 80%;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}
+
+/* ======== ANIMACIÓN SUAVE AL MOSTRAR ======== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.center {
+  animation: fadeInUp 0.8s ease forwards;
 }

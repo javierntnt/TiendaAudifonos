@@ -2,28 +2,29 @@
   position: fixed;
   top: 15px;
   left: 15px;
-  background: #007bff;
+  background: #0d4161;
   border: none;
   color: white;
   font-size: 1.5rem;
   border-radius: 8px;
   padding: 6px 10px;
   cursor: pointer;
-  z-index: 2000; /* ¡Siempre encima! */
+  z-index: 2000;
   transition: background 0.3s ease;
 }
-/*hola*/
+
 .menu-toggle:hover {
-  background: #0056b3;
+  background: #0a324c;
 }
 
+/* Sidebar oculta */
 .sidebar {
   position: fixed;
   top: 0;
   left: -250px;
   width: 250px;
   height: 100vh;
-  background: black;
+  background: #222831;
   color: white;
   transition: left 0.4s ease;
   padding-top: 60px;
@@ -55,5 +56,5 @@
 }
 
 .sidebar a:hover {
-  background: #111;
+  background: #222831;
 }

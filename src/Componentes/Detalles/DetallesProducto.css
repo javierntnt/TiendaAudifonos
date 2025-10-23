@@ -1,5 +1,5 @@
 .detalles-container {
-  margin-left: 240px; /* separa del menú lateral */
+  margin-left:50px; /* separa del menú lateral */
   padding: 50px 60px;
   background-color: #fafafa;
   min-height: 100vh;
@@ -93,7 +93,7 @@ ul {
 }
 ul li {
   color: #fff;
-  background: #0a0a0a;
+  background: #222831;
   margin: 8px 0;
   padding: 10px 15px;
   border-radius: 8px;

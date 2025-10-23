@@ -1,29 +1,22 @@
-/* Quita el margen y padding global del navegador */
+/* ======== RESETEO GLOBAL ======== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Asegúrate de que el body ocupe todo el ancho */
-body {
+body, html, #root {
   width: 100%;
-  height: 100vh;
-  display: flex;
+  height: 100%;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background: #0D4161; /* color de fondo general */
 }
 
-/* Ajuste del nav lateral */
-.nav-lateral {
-  background-color: #020202;
-  color: white;
-  width: 220px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+/* El contenedor principal ocupa toda la pantalla */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
 }
