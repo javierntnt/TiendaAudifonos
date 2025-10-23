@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function Nav() {
 
       <nav className={`sidebar ${isOpen ? "open" : ""}`}>
         <h2>INNOVATION</h2>
+
         <ul>
           <li>
             <a href="/" onClick={closeMenu}>
@@ -38,6 +40,34 @@ export default function Nav() {
             </a>
           </li>
         </ul>
+
+        <hr className="sidebar-divider" />
+
+        <div className="sidebar-socials">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://wa.me/573001234567"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp />
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF />
+          </a>
+        </div>
+
+        <p className="sidebar-contact">📞 +57 300 123 4567</p>
       </nav>
     </>
   );
