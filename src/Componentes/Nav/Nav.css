@@ -12,7 +12,7 @@
   z-index: 2000; /* ¡Siempre encima! */
   transition: background 0.3s ease;
 }
-
+/*hola*/
 .menu-toggle:hover {
   background: #0056b3;
 }
