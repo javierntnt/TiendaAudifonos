@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // 👈 Importar hook de navegación
 import "./Home.css";
 
-import img1 from "../../assets/bafles_1.png";
-import img2 from "../../assets/AirporsBonitos.png";
+import img1 from "../../assets/Airpors_8.png";
+import img2 from "../../assets/Airpors_7.png";
 
 export default function Home() {
   const navigate = useNavigate(); // 👈 Inicializamos el hook

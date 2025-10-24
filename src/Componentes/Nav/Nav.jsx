@@ -52,7 +52,7 @@ export default function Nav() {
             <FaInstagram />
           </a>
           <a
-            href="https://wa.me/573001234567"
+            href="https://wa.me/message/5LFIWK57X3R4I1 "
             target="_blank"
             rel="noopener noreferrer"
           >

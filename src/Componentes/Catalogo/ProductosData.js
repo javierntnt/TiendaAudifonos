@@ -7,7 +7,7 @@ const productos = [
     imagen: "/img/Airpors_2.png",
     descripcion: "Redefiniendo lo que significa escuchar, los AirPods Serie 4 combinan estilo, tecnología y simplicidad en un diseño que habla por si solo.Son más que un accesorio: son una extensión de ti, adaptándose a cada momento de tu día con fluidez y elegancia. Descubre una experiencia sonora que te envuelve, conecta y transforma.Con los AirPods Serie 4, el mundo se escucha diferente.por solo 100 mil pesos lo hacemos llegar a la puerta de tu casa no te quedes sin los tuyos",
     imagenesExtra: ["/img/Airpors_3.png", "/img/Airpors_5.png"],
-    metodosPago: ["Nequi", "Bancolombia", "Contraentrega"],
+    metodosPago: ["Nequi", "Davivienda", "Contraentrega"],
   },
   {
     id: 2,
@@ -16,8 +16,8 @@ const productos = [
     categoria: "N4",
     imagen: "/img/Airpors_6.png",
     descripcion: "son auriculares inalámbricos diseñados para ofrecer una experiencia de audio de alta calidad un precio más accesible dentro del ecosistema de dispositivos Samsung 65 mil pesos lo llevamos hasta la puerta de tu casa no te quedes sin los tuyos",
-    imagenesExtra: ["/img/bafle2.png", "/img/bafle3.png"],
-    metodosPago: ["Nequi", "Tarjeta", "Contraentrega"],
+    imagenesExtra: ["/img/Airpors_7.png", "/img/Airpors_8.png"],
+    metodosPago: ["Nequi", "Davivienda", "Contraentrega"],
   },
   {
     id: 3,
@@ -26,8 +26,8 @@ const productos = [
     categoria: "Bafle",
     imagen: "/img/bafles_1.png",
     descripcion: "Más que un dispositivo, el Charce 7S es una experiencia. Su diseño imponente y sofisticado fusiona modernidad con un toque de audacia, reflejando el espíritu de quienes no siguen tendencias, sino que las crean. Cada detalle ha sido pensado para ofrecer una conexión intuitiva con el usuario, convirtiéndose en una extensión natural de su estilo de vida. No es solo un producto, es un compañero de aventuras, un símbolo de dinamismo y evolución, 105.000 mil pesos lo llevamos hasta la puerta de tu casa no te quedes sin el tuyo",
-    imagenesExtra: ["/img/bafle2.png", "/img/bafle3.png"],
-    metodosPago: ["Nequi", "Tarjeta", "Contraentrega"],
+    imagenesExtra: ["/img/Bafles_1.1.png", "/img/Bafle_1.2.png", "/img/Bafle_1.3.png"],
+    metodosPago: ["Nequi", "Davivienda", "Contraentrega"],
   },
   {
     id: 4,
@@ -36,8 +36,8 @@ const productos = [
     categoria: "Bafle",
     imagen: "/img/bafles_2.png",
     descripcion: "Pequeño pero imparable, este parlante es tu pase directo a la música sin límites. Con su diseño pensado para acompañarte a donde vayas, transforma cualquier momento en una experiencia sonora envolvente. Desde aventuras al aire libre hasta relajantes tardes en casa, su sonido te sigue sin esfuerzo. Solo sujétalo, dale play y deja que cada nota te inspire a seguir adelante. 70.000 pesos lo llevamos a la puerta de tu casa no te quedes sin el tuyo",
-    imagenesExtra: ["/img/bafle2.png", "/img/bafle3.png"],
-    metodosPago: ["Nequi", "Tarjeta", "Contraentrega"],
+    imagenesExtra: ["/img/Bafle_2.1.png", "/img/Bafle_2.2.png"],
+    metodosPago: ["Nequi", "Davivienda", "Contraentrega"],
   },
   {
     id: 5,
@@ -46,8 +46,8 @@ const productos = [
     categoria: "N5",
     imagen: "/img/audifonos_1.png",
     descripcion: "Con un diseño elegante y funcional, los auriculares inalámbricos JBL Tune 510 se convierten en el accesorio perfecto para quienes buscan estilo y comodidad en su día a día. Su estructura compacta y plegable está pensada para acompañarte a donde vayas, permitiendo disfrutar de una experiencia auditiva sin distracciones. Cada detalle de su construcción refleja la calidad de productos que combinan modernidad y practicidad, haciéndolos ideales tanto para el uso diario como para esos momentos especiales en los que necesitas desconectarte del mundo y sumergirte en tu propio universo sonoro. 55 mil pesos lo llevamos hasta la puerta de tu casa no te quedes sin el tuyo",
-    imagenesExtra: ["/img/bafle2.png", "/img/bafle3.png"],
-    metodosPago: ["Nequi", "Tarjeta", "Contraentrega"],
+    imagenesExtra: ["/img/Audifonos_1.1.png", "/img/Audifonos_1.2.png" ,"/img/Audifonos_1.3.png"],
+    metodosPago: ["Nequi", "Davivienda", "Contraentrega"],
   },
 ];
 

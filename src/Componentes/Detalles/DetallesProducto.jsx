@@ -62,15 +62,15 @@ export default function DetallesProducto() {
           {metodoPago === "Nequi" && (
             <div>
               <h4>Escanea el QR o usa el número para pagar:</h4>
-              <img src="/img/qr-nequi.png" alt="QR Nequi" />
-              <p>123456789</p> {/* Número de cuenta de Nequi */}
+              <img src="/img/Qr.png" alt="QR Nequi" />
+              <p>+57 300 5953158</p> {/* Número de cuenta de Nequi */}
             </div>
           )}
-          {metodoPago === "Bancolombia" && (
+          {metodoPago === "Davivienda" && (
             <div>
               <h4>Escanea el QR o usa el número para pagar:</h4>
-              <img src="/img/qr-bancolombia.png" alt="QR Bancolombia" />
-              <p>987654321</p> {/* Número de cuenta de Bancolombia */}
+              <img src="/img/Qr.png" alt="QR Daviplata" />
+              <p>+57 300 5953158</p> {/* Número de cuenta de Bancolombia */}
             </div>
           )}
         </div>
