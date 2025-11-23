@@ -2,14 +2,14 @@
 .detalles-container {
   margin-left: 50px;
   padding: 50px 60px;
-  background-color: #fafafa;
+  background-color: #F5F5F5; /* gris claro para contraste */
   min-height: 100vh;
   box-sizing: border-box;
 }
 
 /* Botón de volver */
 .volver {
-  background-color: #000;
+  background-color: #B22222; /* rojo vibrante */
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -20,14 +20,15 @@
 }
 
 .volver:hover {
-  background-color: #0d4161;
+  background-color: #0D4161; /* azul principal */
 }
 
 /* Título del producto */
 .detalles-container h2 {
   font-size: 2rem;
   margin: 20px 0;
-  color: #080808;
+  color: #0D4161; /* azul principal */
+  font-weight: bold;
 }
 
 /* Galería de imágenes */
@@ -64,14 +65,14 @@
 }
 
 .miniaturas img:hover {
-  border: 2px solid #007bff;
+  border: 2px solid #B22222; /* rojo vibrante */
   transform: scale(1.05);
 }
 
 /* Precio y descripción */
 .precio {
   font-size: 1.5rem;
-  color: #0d4161;
+  color: #0D4161; /* azul principal */
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -87,7 +88,7 @@
 h4 {
   margin-top: 25px;
   font-size: 1.2rem;
-  color: #fffbfb;
+  color: #B22222; /* rojo vibrante */
 }
 
 ul {
@@ -95,12 +96,12 @@ ul {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* Espacio entre los botones */
+  gap: 15px;
 }
 
 ul li {
   color: #fff;
-  background: #222831;
+  background: #0D4161; /* azul principal */
   margin: 8px 0;
   padding: 15px 20px;
   border-radius: 8px;
@@ -110,11 +111,10 @@ ul li {
   transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Animación y efectos al pasar el mouse */
 ul li:hover {
-  background-color: #0d4161;
-  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+  background-color: #B22222; /* rojo vibrante */
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Información de pago */
@@ -127,16 +127,12 @@ ul li:hover {
   margin-bottom: 10px;
 }
 
-/* Responsividad para pantallas pequeñas */
+/* Responsividad */
 @media (max-width: 768px) {
   .detalles-container {
-    padding: 30px; /* Reducir el padding en pantallas pequeñas */
+    padding: 30px;
   }
 
-  .imagenes-detalle {
-    flex-direction: column;
-  }
-  
   .img-principal {
     width: 250px;
     height: 250px;
@@ -148,12 +144,12 @@ ul li:hover {
   }
 
   ul {
-    justify-content: center; /* Centra los botones en pantallas pequeñas */
+    justify-content: center;
     gap: 10px;
   }
 
   ul li {
-    padding: 12px 15px; /* Reducir el tamaño del padding para móviles */
-    font-size: 1rem; /* Ajustar el tamaño de la fuente */
+    padding: 12px 15px;
+    font-size: 1rem;
   }
 }

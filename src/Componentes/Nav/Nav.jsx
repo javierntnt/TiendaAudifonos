@@ -1,12 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Nav.css";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { LanguageContext } from "../LanguageContext.jsx"; // 👈 Importamos el contexto
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language } = useContext(LanguageContext); // 👈 Obtenemos idioma actual
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  // 👇 Diccionario de textos
+  const text = {
+    en: {
+      brand: (
+        <>
+          <span className="color-azul">INN</span>
+          <span className="color-rojo">OVA</span>
+          <span className="color-blanco">TION</span>
+        </>
+      ),
+      home: "Home",
+      info: "Information",
+      catalog: "Catalog",
+      phone: "📞 +57 300 123 4567",
+    },
+    es: {
+      brand: (
+        <>
+          <span className="color-azul">INN</span>
+          <span className="color-rojo">OVA</span>
+          <span className="color-blanco">CION</span>
+        </>
+      ),
+      home: "Inicio",
+      info: "Información",
+      catalog: "Catálogo",
+      phone: "📞 +57 300 123 4567",
+    },
+  };
 
   return (
     <>
@@ -21,22 +53,22 @@ export default function Nav() {
       ></div>
 
       <nav className={`sidebar ${isOpen ? "open" : ""}`}>
-        <h2>INNOVATION</h2>
+        <h2>{text[language].brand}</h2>
 
         <ul>
           <li>
             <a href="/" onClick={closeMenu}>
-              Home
+              {text[language].home}
             </a>
           </li>
           <li>
             <a href="/informacion" onClick={closeMenu}>
-              Información
+              {text[language].info}
             </a>
           </li>
           <li>
             <a href="/catalogo" onClick={closeMenu}>
-              Catálogo
+              {text[language].catalog}
             </a>
           </li>
         </ul>
@@ -52,14 +84,14 @@ export default function Nav() {
             <FaInstagram />
           </a>
           <a
-            href="https://wa.me/message/5LFIWK57X3R4I1 "
+            href="https://wa.me/message/5LFIWK57X3R4I1"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaWhatsapp />
           </a>
         </div>
-        <p className="sidebar-contact">📞 +57 300 123 4567</p>
+        <p className="sidebar-contact">{text[language].phone}</p>
       </nav>
     </>
   );

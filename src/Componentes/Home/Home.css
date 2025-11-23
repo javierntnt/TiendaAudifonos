@@ -83,7 +83,7 @@ body.nav-open .home-container {
 }
 
 .home-btn:hover {
-  background-color: #222;
+  background-color: #B22222;
   transform: translateY(-3px);
 }
 
@@ -185,4 +185,45 @@ body.nav-open .home-container {
 
 .center {
   animation: fadeInUp 0.8s ease forwards;
+}
+.lang-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #B22222;
+}
+.bandera-colombia {
+  position: fixed;       /* se mantiene fija en la pantalla */
+  bottom: 20px;          /* distancia desde abajo */
+  right: 20px;           /* distancia desde la derecha */
+  width: 50px;           /* tamaño del logito */
+  border-radius: 4px;    /* esquinas redondeadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* sombra elegante */
+  z-index: 3000;         /* siempre encima del contenido */
+  cursor: pointer;       /* opcional: cursor tipo mano */
+  transition: transform 0.2s ease;
+}
+
+.bandera-colombia:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
+}
+.color-azul {
+  color: #b3a817; /* azul principal */
+}
+
+.color-rojo {
+  color: #0D4161; /* rojo vibrante */
+}
+
+.color-blanco {
+  color: #B22222; /* blanco/gris claro */
 }

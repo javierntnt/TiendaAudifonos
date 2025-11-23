@@ -1,119 +1,128 @@
 .catalogo-container {
-  margin-left: 0;
-  padding: 80px 20px;
+  padding: 40px;
+  background-color: #F5F5F5; /* gris claro */
   min-height: 100vh;
-  background-color: #fff;
-  transition: margin-left 0.3s ease;
 }
 
-/* Cuando el nav está abierto en pantallas grandes */
-@media (min-width: 769px) {
-  .catalogo-container.menu-abierto {
-    margin-left: 220px;
-  }
-}
-
-/* --- Título --- */
 .catalogo-container h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #B22222; /* rojo vibrante */
   margin-bottom: 20px;
-  color: #111;
+  text-align: center;
 }
 
-/* --- Barra de búsqueda --- */
-.barra-busqueda {
-  margin-bottom: 20px;
-}
-
+/* Barra de búsqueda */
 .barra-busqueda input {
   width: 100%;
   max-width: 400px;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border: 2px solid #0D4161; /* azul principal */
   border-radius: 8px;
   font-size: 1rem;
-  outline: none;
+  margin-bottom: 20px;
 }
 
-/* --- Categorías --- */
+.barra-busqueda input:focus {
+  outline: none;
+  border-color: #B22222; /* rojo vibrante */
+}
+
+/* Categorías */
 .categorias {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 30px;
+  justify-content: center;
 }
 
 .categorias button {
-  background: #0D4161;
-  color: #fff;
-  padding: 8px 14px;
+  background-color: #0D4161; /* azul principal */
+  color: white;
   border: none;
+  padding: 10px 18px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.categorias button:hover,
-.categorias button.activo {
-  background: #0d4161;
+.categorias button:hover {
+  background-color: #B22222; /* rojo vibrante */
+  transform: scale(1.05);
 }
 
-/* --- Grid de productos --- */
+.categorias .activo {
+  background-color: #B22222; /* rojo vibrante */
+}
+
+/* Grid de productos */
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
 }
 
 .producto-card {
-  background: #fff;
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   text-align: center;
-  padding: 15px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .producto-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .producto-card img {
   width: 100%;
-  height: 200px;
+  max-height: 180px;
   object-fit: contain;
-  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .producto-card h3 {
-  margin: 10px 0 5px;
-  font-size: 1.1rem;
-  color: #111;
+  font-size: 1.2rem;
+  color: #0D4161; /* azul principal */
+  margin-bottom: 8px;
 }
 
 .producto-card p {
-  color: #555;
-  font-weight: 600;
+  font-size: 1rem;
+  color: #B22222; /* rojo vibrante */
+  font-weight: bold;
+}
+.bandera-colombia {
+  position: fixed;       /* se mantiene fija en la pantalla */
+  bottom: 20px;          /* distancia desde abajo */
+  right: 20px;           /* distancia desde la derecha */
+  width: 50px;           /* tamaño del logito */
+  border-radius: 4px;    /* esquinas redondeadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* sombra elegante */
+  z-index: 3000;         /* siempre encima del contenido */
+  cursor: pointer;       /* opcional: cursor tipo mano */
+  transition: transform 0.2s ease;
 }
 
-/* --- Responsive grid --- */
-@media (max-width: 1024px) {
-  .grid-productos {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.bandera-colombia:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
+}
+.bandera-colombia {
+  position: fixed;       /* se mantiene fija en la pantalla */
+  bottom: 20px;          /* distancia desde abajo */
+  right: 20px;           /* distancia desde la derecha */
+  width: 50px;           /* tamaño del logito */
+  border-radius: 4px;    /* esquinas redondeadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* sombra elegante */
+  z-index: 3000;         /* siempre encima del contenido */
+  cursor: pointer;       /* opcional: cursor tipo mano */
+  transition: transform 0.2s ease;
 }
 
-@media (max-width: 768px) {
-  .grid-productos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-productos {
-    grid-template-columns: 1fr;
-  }
+.bandera-colombia:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
 }

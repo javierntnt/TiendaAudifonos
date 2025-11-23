@@ -8,12 +8,13 @@
 body, html, #root {
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif; /* fuente más moderna */
   overflow-x: hidden;
-  background: #0D4161; /* color de fondo general */
+  background: #0D4161; /* azul principal */
+  color: #fff;
 }
 
-/* El contenedor principal ocupa toda la pantalla */
+/* Contenedor principal */
 .app-container {
   width: 100%;
   min-height: 100vh;

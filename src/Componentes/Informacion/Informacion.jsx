@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../LanguageContext.jsx"; // 👈 Importamos el contexto
 
 export default function Informacion() {
+  const { language } = useContext(LanguageContext); // 👈 Obtenemos idioma actual
+
   const containerStyle = {
     marginLeft: "240px",
     padding: "40px",
@@ -42,6 +45,26 @@ export default function Informacion() {
     borderRadius: "8px",
     width: "100%",
     maxWidth: "1000px",
+  };
+
+  // 👇 Diccionario de textos
+  const text = {
+    en: {
+      aboutTitle: "About Us",
+      aboutDescription:
+        "We are a technology company committed to offering the best products and services at the best market prices. Our mission is to provide innovative solutions that improve your daily life, always maintaining the highest standards of quality and commitment.",
+      missionTitle: "Our Mission",
+      missionDescription:
+        "In our company, we work to create a positive impact on society through technology. We believe in constant innovation and continuous improvement to exceed our customers' expectations.",
+    },
+    es: {
+      aboutTitle: "Sobre Nosotros",
+      aboutDescription:
+        "Somos una empresa de tecnología con el objetivo de brindarte los mejores productos y servicios con los mejores precios del mercado para tu satisfacción. Nuestra misión es ofrecer soluciones innovadoras que mejoren tu vida diaria, siempre manteniendo los estándares más altos de calidad y compromiso.",
+      missionTitle: "Nuestra Misión",
+      missionDescription:
+        "En nuestra empresa, trabajamos para crear un impacto positivo en la sociedad a través de la tecnología. Creemos en la innovación constante y en la mejora continua para superar las expectativas de nuestros clientes.",
+    },
   };
 
   return (
@@ -101,33 +124,23 @@ export default function Informacion() {
         <div style={{ position: "absolute", top: "20px", left: "40px" }}>
           <img
             data-logo
-            src="/img/icono.png" // asegúrate que la ruta sea correcta en tu proyecto
+            src="/img/icono.png"
             alt="Logo"
             style={logoStyle}
           />
         </div>
-
         <h1 data-title style={titleStyle}>
-          Sobre Nosotros
+          {text[language].aboutTitle}
         </h1>
         <p data-paragraph style={paragraphStyle}>
-          Somos una empresa de tecnología con el objetivo de brindarte los
-          mejores productos y servicios con los mejores precios del mercado
-          para tu satisfacción. Nuestra misión es ofrecer soluciones innovadoras
-          que mejoren tu vida diaria, siempre manteniendo los estándares más altos
-          de calidad y compromiso.
+          {text[language].aboutDescription}
         </p>
 
         <div data-box style={boxStyle}>
           <h2 style={{ fontSize: "2rem", marginBottom: "10px" }}>
-            Nuestra Misión
+            {text[language].missionTitle}
           </h2>
-          <p>
-            En nuestra empresa, trabajamos para crear un impacto positivo en la
-            sociedad a través de la tecnología. Creemos en la innovación constante
-            y en la mejora continua para superar las expectativas de nuestros
-            clientes.
-          </p>
+          <p>{text[language].missionDescription}</p>
         </div>
       </div>
     </>

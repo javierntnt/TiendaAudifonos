@@ -3,26 +3,26 @@
   position: fixed;
   top: 15px;
   left: 15px;
-  background: #0D4161; /* Azul principal */
+  background: #0D4161; /* azul principal */
   border: none;
   color: white;
   font-size: 1.8rem;
   border-radius: 10px;
   padding: 6px 10px;
   cursor: pointer;
-  z-index: 2001; /* siempre encima del overlay */
+  z-index: 2001;
   transition: background 0.3s ease;
 }
 
 .menu-toggle:hover {
-  background: #1E6A8B;
+  background: #B22222; /* rojo vibrante */
 }
 
 /* ======== SIDEBAR ======== */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -270px; /* Oculta fuera de la vista */
+  left: -270px;
   width: 250px;
   height: 100vh;
   background: #222831; /* azul oscuro */
@@ -34,25 +34,15 @@
 }
 
 .sidebar.open {
-  left: 0; /* se muestra */
+  left: 0;
 }
 
 .sidebar h2 {
   margin-left: 20px;
-  font-size: 1.2rem; /* Slightly reduced size for better mobile visibility */
+  font-size: 1.4rem;
   font-weight: bold;
-  color: #ffffff;
-  margin-top: 20px; /* Added margin for a better vertical alignment */
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 30px;
-}
-
-.sidebar li {
-  margin: 20px 0;
+  color: #B22222; /* rojo para resaltar marca */
+  margin-top: 20px;
 }
 
 .sidebar a {
@@ -62,112 +52,27 @@
   padding: 12px 20px;
   display: block;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .sidebar a:hover {
-  background: #1E6A8B; /* Highlighted color change */
-}
-
-/* ======== OVERLAY (fondo oscuro cuando el menú está abierto) ======== */
-.sidebar-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* efecto de oscurecimiento */
-  z-index: 1500;
-  display: none;
-}
-
-.sidebar-overlay.show {
-  display: block;
-}
-
-/* ======== SEPARADOR ======== */
-.sidebar-divider {
-  border: none;
-  height: 1px;
-  background: #444;
-  margin: 30px 20px 15px;
-}
-
-/* ======== ESTRUCTURA FLEX PARA PEGAR FOOTER ABAJO ======== */
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Mantiene el contenido arriba y el footer abajo */
-}
-
-/* ======== CONTENEDOR DE LAS REDES Y CONTACTO ======== */
-.sidebar-footer {
-  margin-top: auto; /* Empuja esta sección al fondo */
-  padding: 20px 0;
-}
-
-.sidebar-divider {
-  border: none;
-  height: 1px;
-  background: #444;
-  margin: 10px 20px;
+  background: #B22222; /* azul claro */
+  color: #fff;
 }
 
 /* ======== REDES SOCIALES ======== */
-.sidebar-socials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.sidebar-socials a {
-  color: #ffffff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
 .sidebar-socials a:hover {
-  color: #1E6A8B;
+  color: #B22222; /* rojo vibrante en hover */
   transform: scale(1.1);
 }
-
-/* ======== CONTACTO ======== */
-.sidebar-contact {
-  text-align: center;
-  font-size: 1rem;
-  color: #bbbbbb;
-  margin-top: 10px;
-  padding-bottom: 10px;
+.color-azul {
+  color: #b3a817; /* azul principal */
 }
 
-/* ======== RESPONSIVO ======== */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 220px;
-  }
+.color-rojo {
+  color: #0D4161; /* rojo vibrante */
+}
 
-  .sidebar h2 {
-    font-size: 1.1rem;
-    margin-top: 30px; /* Ensures a good gap from the top for mobile */
-  }
-
-  .sidebar a {
-    font-size: 1rem;
-  }
-
-  .sidebar-socials {
-    flex-direction: column; /* Stacks icons vertically on small screens */
-    gap: 10px; /* Reduced gap for better fit */
-    margin-top: 15px;
-  }
-
-  .sidebar-contact {
-    font-size: 0.9rem; /* Slightly smaller text for mobile */
-  }
-
-  .menu-toggle {
-    font-size: 1.6rem; /* Adjusted size for mobile usability */
-    padding: 8px 12px;
-  }
+.color-blanco {
+  color: #B22222; /* blanco/gris claro */
 }
