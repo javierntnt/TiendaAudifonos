@@ -4,6 +4,7 @@ const productos = [
     nombre_es: "Airpods serie 4",
     nombre_en: "Airpods Series 4",
     precio: 100000,
+    descuento: 10, // Descuento del 10%
     categoria: "N4",
     imagen: "/img/Airpors_2.png",
     descripcion_es:
@@ -18,6 +19,7 @@ const productos = [
     nombre_es: "Samsung Galaxy Buds FE (Fan edition)",
     nombre_en: "Samsung Galaxy Buds FE (Fan edition)",
     precio: 65000,
+    descuento: 15, // Descuento del 15%
     categoria: "N4",
     imagen: "/img/Airpors_6.png",
     descripcion_es:
@@ -32,6 +34,7 @@ const productos = [
     nombre_es: "Parlante Charce 7S LED",
     nombre_en: "Charce 7S LED Speaker",
     precio: 105000,
+    descuento: 20, // Descuento del 20%
     categoria: "Bafle",
     imagen: "/img/bafles_1.png",
     descripcion_es:
@@ -46,6 +49,7 @@ const productos = [
     nombre_es: "Parlante portátil clip 5",
     nombre_en: "Portable Speaker Clip 5",
     precio: 70000,
+    descuento: 5, // Descuento del 5%
     categoria: "Bafle",
     imagen: "/img/bafles_2.png",
     descripcion_es:
@@ -60,6 +64,7 @@ const productos = [
     nombre_es: "Diadema JBL 510",
     nombre_en: "JBL 510 Headphones",
     precio: 55000,
+    descuento: 10, // Descuento del 10%
     categoria: "N5",
     imagen: "/img/audifonos_1.png",
     descripcion_es:

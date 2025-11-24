@@ -76,3 +76,23 @@
 .color-blanco {
   color: #B22222; /* blanco/gris claro */
 }
+
+/* ======== SUPPORT BUTTON ======== */
+.support-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #0D4161; /* azul principal */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.support-btn:hover {
+  background-color: #B22222; /* rojo vibrante */
+  transform: scale(1.05);
+}

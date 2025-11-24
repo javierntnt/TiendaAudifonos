@@ -70,17 +70,25 @@ export default function Catalogo() {
 
       {/* Grid de productos */}
       <div className="grid-productos">
-        {productosFiltrados.map((p) => (
-          <div
-            key={p.id}
-            className="producto-card"
-            onClick={() => navigate(`/detalles/${p.id}`)}
-          >
-            <img src={p.imagen} alt={p[`nombre_${language}`]} />
-            <h3>{p[`nombre_${language}`]}</h3>
-            <p>${p.precio.toLocaleString()}</p>
-          </div>
-        ))}
+        {productosFiltrados.map((p) => {
+          const precioConDescuento = p.precio - (p.precio * p.descuento) / 100;
+          return (
+            <div
+              key={p.id}
+              className="producto-card"
+              onClick={() => navigate(`/detalles/${p.id}`)}
+            >
+              <img src={p.imagen} alt={p[`nombre_${language}`]} />
+              <h3>{p[`nombre_${language}`]}</h3>
+              <p>
+                ${precioConDescuento.toLocaleString()}{" "}
+                <span className="descuento">
+                  ({p.descuento}% {language === "es" ? "de descuento" :""})
+                </span>
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -26,6 +26,9 @@ export default function DetallesProducto() {
     setImagenSeleccionada(imagen);
   };
 
+  // Calcular el precio con descuento
+  const precioConDescuento = producto.precio - (producto.precio * producto.descuento) / 100;
+
   return (
     <div className="detalles-container">
       <button className="volver" onClick={() => navigate(-1)}>
@@ -53,7 +56,13 @@ export default function DetallesProducto() {
         </div>
       </div>
 
-      <p className="precio">💰 ${producto.precio.toLocaleString()}</p>
+      {/* Mostrar precio con descuento */}
+      <p className="precio">
+        💰 ${precioConDescuento.toLocaleString()}{" "}
+        <span className="descuento">
+          ({producto.descuento}% {language === "es" ? "de descuento" : ""})
+        </span>
+      </p>
       <p className="descripcion">{producto[`descripcion_${language}`]}</p>
 
       {/* Métodos de pago */}

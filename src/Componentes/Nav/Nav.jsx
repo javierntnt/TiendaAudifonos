@@ -92,6 +92,11 @@ export default function Nav() {
           </a>
         </div>
         <p className="sidebar-contact">{text[language].phone}</p>
+
+        {/* Botón para ir al soporte */}
+        <button className="support-btn" onClick={() => window.location.href = "/supourt"}>
+          {language === "es" ? "Ir al Soporte" : "Go to Support"}
+        </button>
       </nav>
     </>
   );
